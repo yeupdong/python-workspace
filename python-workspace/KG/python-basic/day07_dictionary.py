@@ -8,39 +8,40 @@ Dictionary
 st = {'stNum':1234, '이름':'홍길동'}
 print( st )
 print( type(st))
-
+print('='*20)
 mobile = {"품명":"겔럭시", "가격":1000}
 print(mobile)
 print(mobile['품명']) #key값을 입력하면 value값이 출력된다.
-
+print('='*20)
 impo = {}
 impo['파이썬'] = 'www.python.org'
 impo['네이버'] = 'www.naver.com'
 print( impo )
 print(impo['파이썬'])
 print(impo['네이버'])
-
+print('='*20)
 # impo = {}
 # name = input('등록할 키 입력 : ')
 # value = input('등록할 값 입력 : ')
 # impo[name] = value
 # print(impo)
 # print(impo[name])
-
+print('='*20)
 num = {1:"일", 2:"이", 3:"삼"}
 print(num.keys())
 print(num.values())
-
+print('='*20)
 li = list(num.keys())
 print(li, li[0])
-
+print('='*20)
 for i in num.keys():
     print(i,":",num[i])
-
+print('='*20)
 num = {1:"일", 2:"이", 3:"삼"}
-print( num[1] )
-print( num.get(1) )
-
+print( num[1] ) #key값을 ()안에 입력하면 value를 출력해준다.
+print( num.get(1) ) #key값을 ()안에 입력하면 value를 출력해준다.
+print( num.get(2) ) 
+print('='*20)
 #print( num[111] ) #에러 발생
 print( num.get(111) ) #None이라고 뜸.
 
@@ -77,19 +78,26 @@ print( num.get(111) ) #None이라고 뜸.
 
 menu={};  bl = True;  num = 0
 while bl:
-    print("1.메뉴 등록"); print("2.메뉴별 가격 보기");  print("3.가격 수정");print("4.종료")
+    print("1.메뉴 등록")
+    print("2.메뉴별 가격 보기")
+    print("3.가격 수정")
+    print("4.종료")
     num=int(input(">>> "))
     if num == 1:
-        name = input("메뉴 입력 : "); 
-        if menu.get(name) != None:  print("등록되어 있습니다!!!")
-        else:   menu[name] = input("가격 입력 : ")
+        name = input("메뉴 입력 : ")
+        if menu.get(name) != None:
+            print("등록되어 있습니다!!!")
+        else:   
+            menu[name] = input("가격 입력 : ")
     elif num == 2:
         for i in menu.keys():
             print(i,":",menu[i])
     elif num == 3:
-        name = input("수정할 목록 입력 : ");
-        if menu.get(name) == None:  print("등록 먼저 하세요!!")
-        else:    menu[name] = input("수정가격 : ")
+        name = input("수정할 목록 입력 : ")
+        if menu.get(name) == None:
+            print("등록 먼저 하세요!!")
+        else:
+            menu[name] = input("수정가격 : ")
     elif num ==4:
         print("프로그램 종료 합니다")
         bl = False

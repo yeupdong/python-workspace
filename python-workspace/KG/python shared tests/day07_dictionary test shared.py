@@ -120,16 +120,24 @@ ex)
 
 manager = {}
 admin = input('관리자 아이디를 입력하세요: ')
-pw = int(input('관리자 비밀번호를 입력하세요: '))
+pw = input('관리자 비밀번호를 입력하세요: ')
 cnt = 0
-while True:
+while cnt < 5:
+    user = {}
     print('{:^30}'.format('컴퓨터 관리자'))
-    admin = input('관리자 아이디를 입력하세요: ')
-    pw = int(input('관리자 비밀번호를 입력하세요: '))
-    cnt += 1
-    if manager.get[admin] == None:
-        print('아이디 또는 비밀번호를 잘못 입력하셨습니다.')
-    if manager.keys() != None:
+    user_id = input('관리자 아이디를 입력하세요: ')
+    user_pw = input('관리자 비밀번호를 입력하세요: ')
+    if manager.get(admin) != None:
+        print('존재하지 않는 아이디 입니다.')
+    elif user[user_id] != manager[admin]:
+        for i in range(len(manager)):
+            print(i,":",i[admin])
+            cnt += 1
+    elif user[user_id] == manager[admin]:
+        print('관리자 계정으로 로그인 되었습니다.')
+print('5회 오입력으로 계정이 잠깁니다.')
+
+    
         
 
 
