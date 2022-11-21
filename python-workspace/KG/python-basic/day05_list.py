@@ -48,15 +48,18 @@ index를 변수로 이용 가능, 변수에 index를 활용 할 수도 있다.
 # print(ls[2:])
 # print(ls[:2])
 
-# ls = [10,20,30,40]
-# #arr = ls #얕은 복사(전체를 공유)
-# # arr = ls[:] #깊은복사(데이터만 공유)
-# #arr = ls.copy()
+ls = [[1,2,3],10,20,30,40]
+#arr = ls #얕은 복사(전체를 공유)
+#arr = ls[:] #깊은복사(데이터만 공유)
+# arr = ls.copy()
 # import copy
 # arr = copy.deepcopy(ls)
-# arr[0] = '안녕'
+# arr[0].append(4)
 # print(ls, ' : ', id (ls))
 # print(arr, ' : ', id(arr))
+
+
+
 # #ls값을 저장하고 arr에 저장을 하였다.
 # #대입을 시켰으니 두 값은 동일 하다.
 # #id(정보)도 똑같이 나온다. 
@@ -138,13 +141,13 @@ result = [0,0,0,0,0]
 #     invertLs[j] = i
 # print(invertLs)
 
-ls = [82, 85, 76, 79, 96]
-rank = [1, 1, 1, 1 ,1]
-index = 0
+# ls = [82, 85, 76, 79, 96]
+# rank = [1, 1, 1, 1 ,1]
+# index = 0
 
-for i in range(len(ls)):
-    for k in range(len(rank)):
-        if ls[i] < ls[k]:
-            rank[i] += 1
+# for i in range(len(ls)):
+#     for k in range(len(rank)):
+#         if ls[i] < ls[k]:
+#             rank[i] += 1
 
-print(rank)
+# print(rank)
